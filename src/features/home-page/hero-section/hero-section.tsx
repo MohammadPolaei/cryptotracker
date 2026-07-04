@@ -34,7 +34,7 @@ const currencyList = [
 
 export default function HeroSection() {
 	return (
-		<section className="h-78.5 flex justify-between items-center">
+		<section className="w-full h-78.5 flex justify-between items-center">
 			<div className="w-181.75 h-full flex flex-col justify-start items-start gap-5">
 				<div className="font-bold text-[73px] tracking-[-3] leading-14">
 					Track Crypto <span className="text-(--green-color)">Prices</span> in
