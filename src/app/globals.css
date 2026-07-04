@@ -3,12 +3,14 @@
 :root {
 	--bg-color: #ffffff;
 	--text-color: #09090b;
-	--important-test: #82c0981a;
+	--important-text: #82c0981a;
+	--description-text: #71717a;
 }
 
 .dark {
 	--bg-color: #09090b;
 	--text-color: #ffffff;
+	--description-text: #ffffff;
 }
 
 /* whole project styling */
