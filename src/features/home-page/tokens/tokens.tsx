@@ -88,8 +88,7 @@ export default function Tokens() {
 						Latest Crypto <span className="text-(--green-color)">Prices</span>
 					</h2>
 				}
-				description="Track the top 10 cryptocurrencies by market capitalization in
-					real-time"
+				description="Track the top 10 cryptocurrencies by market capitalization in real-time"
 			/>
 
 			<div className="border border-black/5 rounded-lg py-0.5 px-1 outline-0 space-x-1 mb-8">
