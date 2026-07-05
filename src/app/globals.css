@@ -15,11 +15,68 @@
 	--description-text: #ffffff;
 }
 
-/* whole project styling */
+/* Whole project */
 
 body {
-	background-color: var(--bg-color);
+	background: var(--bg-color);
 	color: var(--text-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-	transition: background-color 0.3s, color 0.3s;
+/* FAQ */
+
+details {
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 0.45rem;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+}
+
+summary {
+	list-style: none;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0.75rem 1.25rem;
+
+	cursor: pointer;
+	user-select: none;
+
+	transition: background-color 0.2s ease;
+}
+
+summary:hover {
+	background: rgba(0, 0, 0, 0.02);
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary::marker {
+	content: "";
+}
+
+details[open] summary {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.arrow {
+	transition: transform 0.3s ease;
+}
+
+details[open] .arrow {
+	transform: rotate(180deg);
+}
+
+.content {
+	padding: 1rem 1.25rem;
+}
+
+.content p {
+	margin: 0;
+	line-height: 1.8;
 }

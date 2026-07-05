@@ -46,10 +46,10 @@ export default function HeroSection() {
 					tracking platform.
 				</p>
 				<div className="w-62.5 flex justify-between items-center">
-					<button className="bg-(--green-color) text-center rounded-md text-white cursor-pointer py-2 px-4 font-semibold">
+					<button className="bg-(--green-color) text-center rounded-lg text-white cursor-pointer py-2 px-4 font-semibold">
 						Get Started
 					</button>
-					<button className="border border-black/5 shadow-sm text-center rounded-md text-black cursor-pointer py-2 px-4 font-semibold">
+					<button className="border border-black/5 shadow-sm text-center rounded-lg text-black cursor-pointer py-2 px-4 font-semibold">
 						Learn More
 					</button>
 				</div>

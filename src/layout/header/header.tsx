@@ -24,7 +24,7 @@ export default function Header() {
 				))}
 			</nav>
 			<div>
-				<button className="w-10 h-10 rounded-md shadow-sm shadow-black/5 flex flex-col justify-center items-center cursor-pointer">
+				<button className="w-10 h-10 rounded-lg shadow-sm shadow-black/5 flex flex-col justify-center items-center cursor-pointer">
 					<img src={themeIcon.src} alt="ThemeToggle" />
 				</button>
 			</div>

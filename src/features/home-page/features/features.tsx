@@ -7,6 +7,7 @@ import insightsIcon from "@/assets/features/Market Insights.svg";
 import responsiveIcon from "@/assets/features/Mobile Responsive.svg";
 import alertsIcon from "@/assets/features/Price Alerts.svg";
 import realTimeIcon from "@/assets/features/Real-Time Prices.svg";
+import TitleAndDescription from "@/components/shared/title-and-description";
 
 const featuresList: FeatureType[] = [
 	{
@@ -49,15 +50,16 @@ const featuresList: FeatureType[] = [
 
 export default function Features() {
 	return (
-		<section className="space-y-15">
-			<div className="flex flex-col justify-center items-center gap-5">
-				<h2 className="font-bold text-[56.4px] h-12">
-					Powerful <span className="text-(--green-color)">Features</span>
-				</h2>
-				<p className="text-[25.5px] text-(--description-text)">
-					Everything you need to track cryptocurrency prices and market trends.
-				</p>
-			</div>
+		<section>
+			<TitleAndDescription
+				title={
+					<h2 className="font-bold text-[56.4px] h-12">
+						Powerful <span className="text-(--green-color)">Features</span>
+					</h2>
+				}
+				description="Everything you need to track cryptocurrency prices and market trends."
+			/>
+
 			<div className="w-full grid grid-cols-3 gap-5">
 				{featuresList.map((feature) => (
 					<FeatureCard key={feature.title} feat={feature} />

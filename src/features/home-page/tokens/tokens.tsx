@@ -8,6 +8,7 @@ import ethIcon from "@/assets/tokens/ethIcon.svg";
 import solIcon from "@/assets/tokens/solIcon.svg";
 import usdtIcon from "@/assets/tokens/usdtIcon.svg";
 import xrpIcon from "@/assets/tokens/xrpIcon.svg";
+import TitleAndDescription from "@/components/shared/title-and-description";
 import { CurrencyType } from "@/types/currencies";
 
 const timeFrames = ["1 Day", "1 Week", "1 Month", "1 Year", "All Time"];
@@ -81,16 +82,17 @@ export default function Tokens() {
 
 	return (
 		<section className="w-full flex flex-col justify-start items-center">
-			<div className="flex flex-col justify-center items-center">
-				<h2 className="text-[56.4px] font-bold">
-					Latest Crypto <span className="text-(--green-color)">Prices</span>
-				</h2>
-				<p className="text-(--description-text) text-[25.5px]">
-					Track the top 10 cryptocurrencies by market capitalization in
-					real-time
-				</p>
-			</div>
-			<div className="border border-black/5 rounded-md py-0.5 px-1 outline-0 space-x-1 mb-8 mt-15">
+			<TitleAndDescription
+				title={
+					<h2 className="text-[56.4px] font-bold">
+						Latest Crypto <span className="text-(--green-color)">Prices</span>
+					</h2>
+				}
+				description="Track the top 10 cryptocurrencies by market capitalization in
+					real-time"
+			/>
+
+			<div className="border border-black/5 rounded-lg py-0.5 px-1 outline-0 space-x-1 mb-8">
 				{timeFrames.map((time) => (
 					<button
 						key={time}

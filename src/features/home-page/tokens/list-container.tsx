@@ -7,7 +7,7 @@ export default function ListContainer({
 	currencies: CurrencyType[];
 }) {
 	return (
-		<div className="w-full border border-black/5 shadow-sm shadow-black/5 rounded-md">
+		<div className="w-full border border-black/5 shadow-sm shadow-black/5 rounded-lg">
 			<table className="w-full">
 				<thead className="h-20 text-(--description-text)">
 					<tr>
