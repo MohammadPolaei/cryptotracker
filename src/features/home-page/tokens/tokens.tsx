@@ -90,7 +90,7 @@ export default function Tokens() {
 					real-time
 				</p>
 			</div>
-			<div className="border border-black/5 rounded-md py-0.5 px-1 outline-0 space-x-1 mb-5 mt-10">
+			<div className="border border-black/5 rounded-md py-0.5 px-1 outline-0 space-x-1 mb-8 mt-15">
 				{timeFrames.map((time) => (
 					<button
 						key={time}

@@ -12,7 +12,7 @@ export default function CurrencySingleRow({
 	return (
 		<tr className="text-center h-15">
 			<td>{index}</td>
-			<td className="flex justify-start items-center gap-1">
+			<td className="flex justify-start items-center gap-1 pr-5">
 				<img src={singleCurrency.icon} />
 				<div className="flex flex-col justify-start items-start">
 					<span className="font-semibold">{singleCurrency.title}</span>
@@ -21,7 +21,7 @@ export default function CurrencySingleRow({
 					</span>
 				</div>
 			</td>
-			<td className="font-semibold">{`$${singleCurrency.price}`}</td>
+			<td className="font-semibold text-left">{`$${singleCurrency.price}`}</td>
 			<td
 				className={`${
 					singleCurrency.changeStat == "acs"
