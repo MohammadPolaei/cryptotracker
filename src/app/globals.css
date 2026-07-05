@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+	--breakpoint-mobile: 375px;
+	--breakpoint-tablet: 744px;
+}
+
 :root {
 	--bg-color: #f9faf9;
 	--text-color: #09090b;
