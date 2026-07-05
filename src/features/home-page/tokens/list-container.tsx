@@ -11,17 +11,21 @@ export default function ListContainer({
 			<table className="w-full">
 				<thead className="h-20 text-(--description-text)">
 					<tr>
-						<th className="w-10 font-medium">#</th>
-						<th className="font-medium">Name</th>
-						<th className="font-medium">Price</th>
-						<th className="font-medium">24h%</th>
-						<th className="font-medium">Market Cap</th>
-						<th className="font-medium">Volume (24h)</th>
+						<th className="w-5 font-medium px-5">#</th>
+						<th className="font-medium text-left px-5">Name</th>
+						<th className="font-medium text-left w-15 px-5">Price</th>
+						<th className="font-medium text-right px-5">24h%</th>
+						<th className="font-medium text-right px-5">Market Cap</th>
+						<th className="font-medium text-right px-5">Volume (24h)</th>
 					</tr>
 				</thead>
 				<tbody>
-					{currencies.map((currency: CurrencyType) => (
-						<CurrencySingleRow singleCurrency={currency} key={currency.title} />
+					{currencies.map((currency: CurrencyType, index) => (
+						<CurrencySingleRow
+							index={index + 1}
+							singleCurrency={currency}
+							key={currency.title}
+						/>
 					))}
 				</tbody>
 			</table>

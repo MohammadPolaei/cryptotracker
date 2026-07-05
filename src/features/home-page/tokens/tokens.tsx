@@ -21,6 +21,7 @@ const currencies: CurrencyType[] = [
 		change: "0.25",
 		marketCap: "2,064,456,684,764",
 		volume: "31,570,685,137",
+		changeStat: "acs",
 	},
 	{
 		icon: ethIcon.src,
@@ -30,6 +31,7 @@ const currencies: CurrencyType[] = [
 		change: "4.41",
 		marketCap: "315,294,215,898",
 		volume: "39,272,853,031",
+		changeStat: "acs",
 	},
 	{
 		icon: xrpIcon.src,
@@ -39,6 +41,7 @@ const currencies: CurrencyType[] = [
 		change: "2.67",
 		marketCap: "153,025,185,499",
 		volume: "5,830,620,565",
+		changeStat: "acs",
 	},
 	{
 		icon: usdtIcon.src,
@@ -48,6 +51,7 @@ const currencies: CurrencyType[] = [
 		change: "0.01",
 		marketCap: "150,333,097,668",
 		volume: "88,895,292,120",
+		changeStat: "dec",
 	},
 	{
 		icon: bnbIcon.src,
@@ -57,6 +61,7 @@ const currencies: CurrencyType[] = [
 		change: "0.80",
 		marketCap: "95,980,456,844",
 		volume: "1,600,427,657",
+		changeStat: "acs",
 	},
 
 	{
@@ -67,6 +72,7 @@ const currencies: CurrencyType[] = [
 		change: "3.51",
 		marketCap: "93,866,719,371",
 		volume: "7,145,375,003",
+		changeStat: "acs",
 	},
 ];
 

@@ -6,4 +6,5 @@ export type CurrencyType = {
 	change: string;
 	marketCap: string;
 	volume: string;
+	changeStat: "acs" | "dec";
 };

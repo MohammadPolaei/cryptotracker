@@ -2,8 +2,8 @@ import adaIcon from "@/assets/hero-section/ADA.svg";
 import ethIcon from "@/assets/hero-section/ETH.svg";
 import solIcon from "@/assets/hero-section/SOL.svg";
 
-import acsIcon from "@/assets/hero-section/acsIcon.svg";
-import decIcon from "@/assets/hero-section/decIcon.svg";
+import acsIcon from "@/assets/acsIcon.svg";
+import decIcon from "@/assets/decIcon.svg";
 
 const currencyList = [
 	{
