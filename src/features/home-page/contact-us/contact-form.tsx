@@ -24,11 +24,11 @@ export default function ContactForm() {
 			<div className="flex flex-col w-full gap-1">
 				<label className="text-4 font-semibold">Message</label>
 				<textarea
-					className="bg-white p-2 h-40 resize-none outline-white/0 focus:outline-(--green-color) rounded-md transition-all ease-in-out duration-500"
+					className="bg-white p-2 h-40 resize-none outline-white/0 focus:outline-(--green-color)/50 rounded-md transition-all ease-in-out duration-500"
 					placeholder="Your massage here ..."
 				/>
 			</div>
-			<button className="w-full bg-(--green-color) text-white rounded-md disabled:opacity-70 cursor-pointer py-2">
+			<button className="w-full bg-(--green-color)/80 text-white rounded-sm disabled:opacity-50 cursor-pointer py-2">
 				Send Message
 			</button>
 		</div>

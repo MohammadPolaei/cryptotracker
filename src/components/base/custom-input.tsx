@@ -4,7 +4,7 @@ export default function CustomInput(
 	return (
 		<input
 			{...attributes}
-			className="bg-white h-9.25 rounded-md px-2 outline-2 outline-white/0 focus:outline-(--green-color) transition-all ease-in-out duration-500 placeholder:text-black"
+			className="bg-white h-9.25 rounded-sm px-2 outline-3 outline-white/0 focus:outline-(--green-color)/40 transition-all ease-in-out duration-500 placeholder:text-black"
 		/>
 	);
 }
