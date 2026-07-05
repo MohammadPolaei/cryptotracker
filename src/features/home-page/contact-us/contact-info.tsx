@@ -7,7 +7,7 @@ export default function ContactInfo() {
 		<div className="w-136.5 h-90.25">
 			<div className="flex flex-col justify-start items-start">
 				<div className="flex flex-col justify-start items-start pb-10">
-					<h2 className="font-bold text-[56.4px]">
+					<h2 className="font-bold text-[56.4px] h-18">
 						Get In
 						<span className="text-(--green-color)"> Touch</span>
 					</h2>
@@ -16,30 +16,30 @@ export default function ContactInfo() {
 						form and our team will get back to you as soon as possible.
 					</p>
 				</div>
-				<div>
+				<div className="flex flex-col gap-5">
 					<div className="flex justify-start items-center gap-4">
 						<img src={phoneIcon.src} />
-						<div className="flex flex-col justify-start items-start">
-							<span className="font-bold">Phone</span>
-							<span className="text-(--description-text)">
+						<div className="flex flex-col justify-start items-start leading-5">
+							<span className="font-bold text-[17.1px]">Phone</span>
+							<span className="text-(--description-text) text-[19.6px]">
 								+1 (555) 123-4567
 							</span>
 						</div>
 					</div>
 					<div className="flex justify-start items-center gap-4">
 						<img src={emailIcon.src} />
-						<div className="flex flex-col justify-start items-start">
-							<span className="font-bold">Email</span>
-							<span className="text-(--description-text)">
+						<div className="flex flex-col justify-start items-start leading-5">
+							<span className="font-bold text-[17.1px]">Email</span>
+							<span className="text-(--description-text) text-[19.6px]">
 								support@cryptotracker.com
 							</span>
 						</div>
 					</div>
 					<div className="flex justify-start items-center gap-4">
 						<img src={addressIcon.src} />
-						<div className="flex flex-col justify-start items-start">
-							<span className="font-bold">Address</span>
-							<span className="text-(--description-text)">
+						<div className="flex flex-col justify-start items-start leading-5">
+							<span className="font-bold text-[17.1px]">Address</span>
+							<span className="text-(--description-text) text-[19.6px]">
 								123 Blockchain Street, Crypto City, CC 12345
 							</span>
 						</div>
