@@ -4,7 +4,7 @@ import phoneIcon from "@/assets/contact-us/phoneIcon.svg";
 
 export default function ContactInfo() {
 	return (
-		<div className="w-136.5 h-90.25">
+		<div className="w-136.5">
 			<div className="flex flex-col justify-start items-start">
 				<div className="flex flex-col justify-start items-start pb-10">
 					<h2 className="font-bold text-[56.4px] h-18">

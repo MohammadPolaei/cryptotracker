@@ -84,7 +84,7 @@ export default function Tokens() {
 		<section className="w-full flex flex-col justify-start items-center">
 			<TitleAndDescription
 				title={
-					<h2 className="font-bold text-[56.4px] h-12">
+					<h2 className="font-bold text-[30px] tablet:text-[56.4px] h-12 text-center w-full">
 						Latest Crypto <span className="text-(--green-color)">Prices</span>
 					</h2>
 				}
@@ -102,7 +102,7 @@ export default function Tokens() {
 							isActive == time
 								? "bg-white text-black border-black/5 shadow-sm shadow-black/5 box-border"
 								: "border-black/0 text-(--description-text)"
-						} px-2 py-1 rounded-sm font-semibold border cursor-pointer outline-0 transition-all ease-in-out duration-800 text-[15.2px]`}
+						} px-1 tablet:px-2 py-1 rounded-sm font-semibold border cursor-pointer outline-0 transition-all ease-in-out duration-800 tablet:text-[15.2px] text-[12px]`}
 					>
 						{time}
 					</button>

@@ -7,7 +7,7 @@ export default function ListContainer({
 	currencies: CurrencyType[];
 }) {
 	return (
-		<div className="w-full border border-black/5 shadow-sm shadow-black/5 rounded-lg relative">
+		<div className="w-full border border-black/5 shadow-sm shadow-black/5 rounded-lg relative overflow-x-auto">
 			{/* background (green spot) */}
 			<div className="h-200 absolute w-full bg-radial via-transparent from-(--green-color)/5 to-transparent" />
 
@@ -15,8 +15,8 @@ export default function ListContainer({
 				<thead className="h-20 text-(--description-text)">
 					<tr>
 						<th className="w-5 font-medium px-5">#</th>
-						<th className="font-medium text-left">Name</th>
-						<th className="font-medium text-left w-15">Price</th>
+						<th className="font-medium text-left min-w-38">Name</th>
+						<th className="font-medium text-left w-15 min-w-21">Price</th>
 						<th className="font-medium text-right px-5">24h%</th>
 						<th className="font-medium text-right px-5">Market Cap</th>
 						<th className="font-medium text-right px-5">Volume (24h)</th>
