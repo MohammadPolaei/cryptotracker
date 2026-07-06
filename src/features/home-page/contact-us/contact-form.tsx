@@ -2,7 +2,7 @@ import CustomInput from "@/components/base/custom-input";
 
 export default function ContactForm() {
 	return (
-		<div className="w-148.25 h-127.75 rounded-md border border-black/4 shadow-sm shadow-black/4 flex flex-col justify-between items-center p-2">
+		<div className="w-full tablet:w-148.25 h-127.75 rounded-md border border-black/4 shadow-sm shadow-black/4 flex flex-col justify-between items-center p-2">
 			<div className="flex justify-between items-center gap-5 w-full">
 				<div className="flex flex-col w-full gap-1">
 					<label className="text-4 font-semibold">First name</label>

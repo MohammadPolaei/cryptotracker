@@ -1,3 +1,4 @@
+import ContactUs from "./contact-us/contact-us";
 import Faq from "./FAQ/faq";
 import Features from "./features/features";
 import HeroSection from "./hero-section/hero-section";
@@ -10,7 +11,7 @@ export default function HomePage() {
 			<Tokens />
 			<Features />
 			<Faq />
-			{/* <ContactUs /> */}
+			<ContactUs />
 		</div>
 	);
 }
