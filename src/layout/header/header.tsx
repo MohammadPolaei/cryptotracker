@@ -1,6 +1,10 @@
+"use client";
+
 import themeIcon from "@/assets/header/ThemeIcon.svg";
 import cryptoTrackerIcon from "@/assets/header/cryptotrackerIcon.svg";
+import humMenu from "@/assets/menu.svg";
 import Link from "next/link";
+import { useState } from "react";
 
 const navBarList = [
 	{ title: "Tokens", href: "#tokens" },
@@ -10,8 +14,20 @@ const navBarList = [
 ];
 
 export default function Header() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		if (!isMenuOpen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+
+		setIsMenuOpen((perv) => !perv);
+	};
+
 	return (
-		<div className="w-full h-16 px-2 tablet:px-10 flex justify-between items-center">
+		<div className="w-full h-16 px-2 tablet:px-10 flex justify-between items-center relative">
 			<div className="flex items-center justify-center gap-1">
 				<img src={cryptoTrackerIcon.src} alt="Icon" />
 				<span className="font-bold text-xl tablet:text-2xl">CryptoTracker</span>
@@ -23,14 +39,50 @@ export default function Header() {
 					</Link>
 				))}
 			</nav>
-			<div>
+			<div className="flex items-center gap-3">
 				<button className="w-10 h-10 rounded-lg shadow-sm shadow-black/5 flex flex-col justify-center items-center cursor-pointer active:bg-(--green-color)/30 transition duration-300 ease-in-out">
 					<img src={themeIcon.src} alt="ThemeToggle" />
 				</button>
+				<button
+					onClick={() => toggleMenu()}
+					className="tablet:hidden w-10 h-10 rounded-lg shadow-sm shadow-black/5 flex flex-col justify-center items-center cursor-pointer active:bg-(--green-color)/30 transition duration-300 ease-in-out"
+				>
+					<img src={humMenu.src} />
+				</button>
 			</div>
-			<div className="tablet:hidden flex flex-col justify-center items-center">
-				Menu
-			</div>
+			{/* mobile menu */}
+			<nav
+				className={`
+        absolute
+        top-full
+        right-0
+        w-full
+        bg-(--bg-color)/10
+				backdrop-blur-[20px]
+        overflow-hidden
+				z-100
+
+        transition-all
+        duration-800
+        ease-in-out
+
+        ${isMenuOpen ? "h-screen opacity-100" : "max-h-0 opacity-0"}
+
+				flex flex-col justify-start items-center gap-5
+				py-10
+    `}
+			>
+				{navBarList.map((navItem) => (
+					<Link
+						href={navItem.href}
+						key={navItem.title}
+						onClick={() => toggleMenu()}
+						className="text-black bg-white rounded-lg border border-black/10 py-5 w-4/5 text-center origin-center active:scale-120 transition duration-100 ease-in-out"
+					>
+						{navItem.title}
+					</Link>
+				))}
+			</nav>
 		</div>
 	);
 }

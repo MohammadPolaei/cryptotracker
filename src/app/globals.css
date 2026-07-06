@@ -21,6 +21,9 @@
 }
 
 /* Whole project */
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	background: var(--bg-color);
