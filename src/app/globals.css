@@ -27,6 +27,9 @@
 body.dark #contact {
 	--description-text: #a6a6a6;
 }
+body.dark #footer {
+	--description-text: #a6a6a6;
+}
 
 /* Whole project */
 html {

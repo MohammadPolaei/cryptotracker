@@ -1,8 +1,8 @@
 "use client";
 
+import cryptoTrackerIcon from "@/assets/cryptotrackerIcon.svg";
 import themeIconDark from "@/assets/header/ThemeIcon-dark.svg";
 import themeIcon from "@/assets/header/ThemeIcon.svg";
-import cryptoTrackerIcon from "@/assets/header/cryptotrackerIcon.svg";
 import { useTheme } from "@/hooks/use-theme";
 import Link from "next/link";
 import { useState } from "react";
