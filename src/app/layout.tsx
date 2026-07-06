@@ -1,5 +1,6 @@
 import Footer from "@/layout/footer/footer";
 import Header from "@/layout/header/header";
+import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -29,15 +30,17 @@ export default function RootLayout({
 			lang="en"
 			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 		>
-			<body className="min-h-full flex flex-col justify-start items-center bg-(--bg-color) relative">
-				<Header />
-				<main className="w-full">
-					<div className="mx-auto max-w-[1440] py-30 px-3 tablet:px-6 tablet:py-32 desktop:px-20 desktop:py-32">
-						{children}
-					</div>
-				</main>
-				<Footer />
-			</body>
+			<ThemeProvider>
+				<body className="min-h-full flex flex-col justify-start items-center bg-(--bg-color) relative">
+					<Header />
+					<main className="w-full">
+						<div className="mx-auto max-w-[1440] py-30 px-3 tablet:px-6 tablet:py-32 desktop:px-20 desktop:py-32">
+							{children}
+						</div>
+					</main>
+					<Footer />
+				</body>
+			</ThemeProvider>
 		</html>
 	);
 }

@@ -94,7 +94,7 @@ export default function Tokens() {
 				description="Track the top 10 cryptocurrencies by market capitalization in real-time"
 			/>
 
-			<div className="border border-black/5 rounded-lg py-0.5 px-1 outline-0 space-x-1 mb-8">
+			<div className="border-2 border-(--border-color) rounded-lg py-0.5 px-1 outline-0 space-x-1 mb-8">
 				{timeFrames.map((time) => (
 					<button
 						key={time}
@@ -103,9 +103,9 @@ export default function Tokens() {
 						}}
 						className={`${
 							isActive == time
-								? "bg-white text-black border-black/5 shadow-sm shadow-black/5 box-border"
-								: "border-black/0 text-(--description-text)"
-						} px-1 tablet:px-2 py-1 rounded-sm font-semibold border cursor-pointer outline-0 transition-all ease-in-out duration-800 tablet:text-[15.2px] text-[12px]`}
+								? "bg-(--time-frame-button) text-(--text-color) border-(--border-color) box-border"
+								: "border-black/0 text-(--description-text)/50"
+						} px-1 tablet:px-2 py-1 rounded-sm font-semibold border-2 cursor-pointer outline-0 transition-all ease-in-out duration-800 tablet:text-[15.2px] text-[12px]`}
 					>
 						{time}
 					</button>

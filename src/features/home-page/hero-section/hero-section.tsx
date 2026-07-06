@@ -53,13 +53,13 @@ export default function HeroSection() {
 					<button className="w-full tablet:w-fit bg-(--green-color) text-center rounded-md text-white cursor-pointer py-2 px-4 font-semibold">
 						Get Started
 					</button>
-					<button className="w-full tablet:w-fit border border-black/5 shadow-sm text-center rounded-md text-black cursor-pointer py-2 px-4 font-semibold">
+					<button className="w-full tablet:w-fit border-2 border-(--border-color) text-center rounded-md text-(--text-color) cursor-pointer py-2 px-4 font-semibold transition-all duration-700 ease-in-out">
 						Learn More
 					</button>
 				</div>
 			</div>
 			<div>
-				<div className="w-[288px] h-61 border border-black/5 rounded-2xl shadow-sm shadow-black/5 relative flex flex-col justify-center items-center gap-3">
+				<div className="w-[288px] h-61 border-2 border-(--border-color) rounded-2xl relative flex flex-col justify-center items-center gap-3">
 					{currencyList.map((currency) => (
 						<div
 							key={currency.title}

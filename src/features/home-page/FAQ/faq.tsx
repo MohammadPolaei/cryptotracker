@@ -46,7 +46,7 @@ export default function Faq() {
 				}
 				description="Find answers to common questions about our crypto tracking platform."
 			/>
-			<div className="w-full tablet:max-w-3xl flex flex-col justify-center items-start gap-0.5">
+			<div className="w-full tablet:max-w-3xl flex flex-col justify-center items-start gap-1">
 				{faqList.map((item, index) => (
 					<FaqSummary
 						key={index}

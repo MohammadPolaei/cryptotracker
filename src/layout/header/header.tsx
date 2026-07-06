@@ -3,7 +3,7 @@
 import themeIconDark from "@/assets/header/ThemeIcon-dark.svg";
 import themeIcon from "@/assets/header/ThemeIcon.svg";
 import cryptoTrackerIcon from "@/assets/header/cryptotrackerIcon.svg";
-import humMenu from "@/assets/menu.svg";
+import { useTheme } from "@/hooks/use-theme";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -16,7 +16,8 @@ const navBarList = [
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const [themeLight, setThemeLight] = useState(true);
+
+	const { dark, toggleTheme } = useTheme();
 
 	const toggleMenu = () => {
 		if (!isMenuOpen) {
@@ -28,13 +29,10 @@ export default function Header() {
 		setIsMenuOpen((perv) => !perv);
 	};
 
-	const isDark =
-		typeof window !== "undefined" && document.body.classList.contains("dark");
-
 	return (
 		<div
 			id="theHeader"
-			className="w-full bg-(--bg-color) h-16 px-2 tablet:px-10 flex justify-between items-center fixed inset-0 z-200"
+			className="w-full bg-(--bg-color) h-16 px-2 tablet:px-10 flex justify-between items-center fixed inset-0 z-200 border-b-2 border-(--border-color)"
 		>
 			<div className="flex items-center justify-center gap-1">
 				<img src={cryptoTrackerIcon.src} alt="Icon" />
@@ -50,12 +48,11 @@ export default function Header() {
 			<div className="flex items-center gap-3">
 				<button
 					onClick={() => {
-						document.body.classList.toggle("dark");
-						setThemeLight((perv) => !perv);
+						toggleTheme();
 					}}
-					className="w-10 h-10 rounded-lg shadow-sm shadow-black/5 flex flex-col justify-center items-center cursor-pointer active:bg-(--green-color)/30 transition duration-300 ease-in-out"
+					className="w-10 h-10 rounded-lg border-2 border-(--border-color) flex flex-col justify-center items-center cursor-pointer active:bg-(--green-color)/30 transition duration-300 ease-in-out"
 				>
-					{isDark || !themeLight ? (
+					{dark ? (
 						<img src={themeIconDark.src} alt="ThemeToggle" />
 					) : (
 						<img src={themeIcon.src} alt="ThemeToggle" />
@@ -63,9 +60,23 @@ export default function Header() {
 				</button>
 				<button
 					onClick={() => toggleMenu()}
-					className="tablet:hidden w-10 h-10 rounded-lg shadow-sm shadow-black/5 flex flex-col justify-center items-center cursor-pointer active:bg-(--green-color)/30 transition duration-300 ease-in-out"
+					className="tablet:hidden w-10 h-10 rounded-lg border-2 border-(--border-color) flex flex-col justify-center items-center cursor-pointer active:bg-(--green-color)/30 transition duration-300 ease-in-out"
 				>
-					<img src={humMenu.src} />
+					<svg
+						className="text-(--text-color)"
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+					>
+						<path
+							d="M3.33325 10H16.6666M3.33325 15H16.6666M3.33325 5H16.6666"
+							stroke="currentColor"
+							strokeWidth="1.33333"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+						/>
+					</svg>{" "}
 				</button>
 			</div>
 			{/* mobile menu */}
@@ -95,7 +106,9 @@ export default function Header() {
 						href={navItem.href}
 						key={navItem.title}
 						onClick={() => toggleMenu()}
-						className="text-black bg-radial from-transparent to-white/50 rounded-lg shadow-sm shadow-b-black/10 py-5 w-4/5 text-center origin-center active:scale-120 transition duration-100 ease-in-out"
+						className={`${
+							dark ? "to-white/10" : "to-white/50"
+						} text-(--text-color) bg-radial from-transparent  rounded-lg shadow-sm shadow-b-black/10 py-5 w-4/5 text-center origin-center active:scale-120 transition duration-100 ease-in-out`}
 					>
 						{navItem.title}
 					</Link>
