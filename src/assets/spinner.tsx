@@ -1,0 +1,27 @@
+export default function Spinner() {
+	return (
+		<svg
+			className="animate-spin"
+			width="18"
+			height="18"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<circle
+				cx="12"
+				cy="12"
+				r="10"
+				stroke="currentColor"
+				strokeWidth="3"
+				opacity="0.2"
+			/>
+			<path
+				d="M22 12a10 10 0 0 1-10 10"
+				stroke="currentColor"
+				strokeWidth="3"
+				strokeLinecap="round"
+			/>
+		</svg>
+	);
+}
