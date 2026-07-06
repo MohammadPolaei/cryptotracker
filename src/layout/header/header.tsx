@@ -1,5 +1,6 @@
 "use client";
 
+import themeIconDark from "@/assets/header/ThemeIcon-dark.svg";
 import themeIcon from "@/assets/header/ThemeIcon.svg";
 import cryptoTrackerIcon from "@/assets/header/cryptotrackerIcon.svg";
 import humMenu from "@/assets/menu.svg";
@@ -15,6 +16,7 @@ const navBarList = [
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [themeLight, setThemeLight] = useState(true);
 
 	const toggleMenu = () => {
 		if (!isMenuOpen) {
@@ -26,8 +28,14 @@ export default function Header() {
 		setIsMenuOpen((perv) => !perv);
 	};
 
+	const isDark =
+		typeof window !== "undefined" && document.body.classList.contains("dark");
+
 	return (
-		<div className="w-full bg-(--bg-color) h-16 px-2 tablet:px-10 flex justify-between items-center fixed inset-0 z-200">
+		<div
+			id="theHeader"
+			className="w-full bg-(--bg-color) h-16 px-2 tablet:px-10 flex justify-between items-center fixed inset-0 z-200"
+		>
 			<div className="flex items-center justify-center gap-1">
 				<img src={cryptoTrackerIcon.src} alt="Icon" />
 				<span className="font-bold text-xl tablet:text-2xl">CryptoTracker</span>
@@ -40,8 +48,18 @@ export default function Header() {
 				))}
 			</nav>
 			<div className="flex items-center gap-3">
-				<button className="w-10 h-10 rounded-lg shadow-sm shadow-black/5 flex flex-col justify-center items-center cursor-pointer active:bg-(--green-color)/30 transition duration-300 ease-in-out">
-					<img src={themeIcon.src} alt="ThemeToggle" />
+				<button
+					onClick={() => {
+						document.body.classList.toggle("dark");
+						setThemeLight((perv) => !perv);
+					}}
+					className="w-10 h-10 rounded-lg shadow-sm shadow-black/5 flex flex-col justify-center items-center cursor-pointer active:bg-(--green-color)/30 transition duration-300 ease-in-out"
+				>
+					{isDark || !themeLight ? (
+						<img src={themeIconDark.src} alt="ThemeToggle" />
+					) : (
+						<img src={themeIcon.src} alt="ThemeToggle" />
+					)}
 				</button>
 				<button
 					onClick={() => toggleMenu()}

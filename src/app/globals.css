@@ -8,10 +8,10 @@
 :root {
 	--bg-color: #f9faf9;
 	--text-color: #09090b;
-	--important-text: #82c0981a;
 	--description-text: #71717a;
 	--green-color: #16a34a;
 	--red-color: #dc2626;
+	--border-color: #a7a7a726;
 }
 
 .dark {
@@ -28,7 +28,11 @@ html {
 body {
 	background: var(--bg-color);
 	color: var(--text-color);
-	transition: background-color 0.3s ease, color 0.3s ease;
+	transition: background-color 1s ease, color 1s ease;
+}
+
+#theHeader {
+	transition: background-color 1s ease, color 1s ease;
 }
 
 /* FAQ */
