@@ -8,7 +8,7 @@ export default function TitleAndDescription({
 	description: string;
 }) {
 	return (
-		<div className="flex flex-col justify-center items-center gap-7 mb-15">
+		<div className="flex flex-col justify-center items-center gap-3 tablet:gap-7 mb-15">
 			{title}
 			<p className="text-4 text-center tablet:text-left tablet:text-[25.5px] text-(--description-text)">
 				{description}

@@ -7,7 +7,7 @@ export default function FeatureCard({ feat }: { feat: FeatureType }) {
 				<img src={feat.icon} />
 			</div>
 			<h3 className="font-bold text-[22.7px]">{feat.title}</h3>
-			<p className="text-[19.6px] text-(--description-text)">
+			<p className="text-4 tablet:text-[19.6px] text-(--description-text)">
 				{feat.description}
 			</p>
 		</div>

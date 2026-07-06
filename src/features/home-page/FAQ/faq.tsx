@@ -39,14 +39,14 @@ export default function Faq() {
 		<div className="w-full flex flex-col justify-start items-center">
 			<TitleAndDescription
 				title={
-					<h2 className="font-bold text-[56.4px] h-12">
+					<h2 className="font-bold text-[30px] tablet:text-[56.4px] text-center w-full">
 						Frequently Asked
 						<span className="text-(--green-color)"> Questions</span>
 					</h2>
 				}
 				description="Find answers to common questions about our crypto tracking platform."
 			/>
-			<div className="w-3xl flex flex-col justify-center items-start gap-0.5">
+			<div className="max-w-3xl flex flex-col justify-center items-start gap-0.5">
 				{faqList.map((item, index) => (
 					<FaqSummary
 						key={index}

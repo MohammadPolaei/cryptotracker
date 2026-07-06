@@ -53,14 +53,14 @@ export default function Features() {
 		<section>
 			<TitleAndDescription
 				title={
-					<h2 className="font-bold text-[56.4px] h-12">
+					<h2 className="font-bold text-[30px] tablet:text-[56.4px] h-12 text-center w-full">
 						Powerful <span className="text-(--green-color)">Features</span>
 					</h2>
 				}
 				description="Everything you need to track cryptocurrency prices and market trends."
 			/>
 
-			<div className="w-full grid grid-cols-3 gap-5">
+			<div className="w-full grid grid-cols-1 tablet:grid-cols-3 gap-5">
 				{featuresList.map((feature) => (
 					<FeatureCard key={feature.title} feat={feature} />
 				))}

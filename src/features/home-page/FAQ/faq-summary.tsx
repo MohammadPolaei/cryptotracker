@@ -10,7 +10,9 @@ export default function FaqSummary({
 	return (
 		<details className="faq">
 			<summary>
-				<span>{question}</span>
+				<span className="font-semibold text-[14px] tablet:text-5">
+					{question}
+				</span>
 
 				<img src={arrowIcon.src} alt="" className="arrow" />
 			</summary>
