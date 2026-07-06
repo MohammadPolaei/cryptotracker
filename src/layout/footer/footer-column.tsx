@@ -13,7 +13,7 @@ export default function FooterColumn({ title, links }: Props) {
 					<li key={item}>
 						<a
 							href="#"
-							className="text-(--description-text) hover:text-black transition"
+							className="text-(--description-text) hover:text-white transition"
 						>
 							{item}
 						</a>

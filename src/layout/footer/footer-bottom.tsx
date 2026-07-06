@@ -6,15 +6,15 @@ export default function FooterBottom() {
 			</p>
 
 			<div className="flex gap-3 desktop:gap-8">
-				<a href="#" className="text-(--description-text) hover:text-black">
+				<a href="#" className="text-(--description-text) hover:text-white">
 					Privacy Policy
 				</a>
 
-				<a href="#" className="text-(--description-text) hover:text-black">
+				<a href="#" className="text-(--description-text) hover:text-white">
 					Terms of Service
 				</a>
 
-				<a href="#" className="text-(--description-text) hover:text-black">
+				<a href="#" className="text-(--description-text) hover:text-white">
 					Cookie Settings
 				</a>
 			</div>
