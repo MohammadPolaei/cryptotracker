@@ -29,10 +29,10 @@ export default function RootLayout({
 			lang="en"
 			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 		>
-			<body className="min-h-full flex flex-col justify-start items-center bg-(--bg-color)">
+			<body className="min-h-full flex flex-col justify-start items-center bg-(--bg-color) relative">
 				<Header />
 				<main className="w-full">
-					<div className="mx-auto max-w-7xl px-3 tablet:p-8 tablet:py-15 desktop:p-15">
+					<div className="mx-auto max-w-7xl py-16 px-3 tablet:px-25 tablet:py-32 desktop:px-32 desktop:py-32">
 						{children}
 					</div>
 				</main>

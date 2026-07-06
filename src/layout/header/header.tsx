@@ -27,7 +27,7 @@ export default function Header() {
 	};
 
 	return (
-		<div className="w-full h-16 px-2 tablet:px-10 flex justify-between items-center relative">
+		<div className="w-full bg-(--bg-color) h-16 px-2 tablet:px-10 flex justify-between items-center fixed inset-0 z-200">
 			<div className="flex items-center justify-center gap-1">
 				<img src={cryptoTrackerIcon.src} alt="Icon" />
 				<span className="font-bold text-xl tablet:text-2xl">CryptoTracker</span>
