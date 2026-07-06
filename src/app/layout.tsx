@@ -32,7 +32,9 @@ export default function RootLayout({
 			<body className="min-h-full flex flex-col justify-start items-center bg-(--bg-color)">
 				<Header />
 				<main className="w-full">
-					<div className="mx-auto max-w-7xl px-3 lg:p-15">{children}</div>
+					<div className="mx-auto max-w-7xl px-3 tablet:p-8 desktop:p-15">
+						{children}
+					</div>
 				</main>
 				<Footer />
 			</body>

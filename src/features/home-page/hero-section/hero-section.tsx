@@ -34,7 +34,7 @@ const currencyList = [
 
 export default function HeroSection() {
 	return (
-		<section className="w-full flex flex-col tablet:flex-row justify-between items-center relative gap-15 tablet:gap-0">
+		<section className="w-full flex flex-col desktop:flex-row justify-between items-center relative gap-15 desktop:gap-0">
 			{/* background (green spot) */}
 			<div className="w-2/3 h-150 absolute right-0 bg-radial via-transparent from-(--green-color)/10 to-transparent" />
 
@@ -49,11 +49,11 @@ export default function HeroSection() {
 					data. Get insights and make informed decisions with our comprehensive
 					tracking platform.
 				</p>
-				<div className="w-full mobile:w-62.5 flex flex-col mobile:flex-row justify-between items-center gap-5 tablet:gap-0">
-					<button className="w-full mobile:w-fit bg-(--green-color) text-center rounded-lg text-white cursor-pointer py-2 px-4 font-semibold">
+				<div className="w-full tablet:w-62.5 flex flex-col tablet:flex-row justify-between items-center gap-5 tablet:gap-0">
+					<button className="w-full tablet:w-fit bg-(--green-color) text-center rounded-lg text-white cursor-pointer py-2 px-4 font-semibold">
 						Get Started
 					</button>
-					<button className="w-full mobile:w-fit border border-black/5 shadow-sm text-center rounded-lg text-black cursor-pointer py-2 px-4 font-semibold">
+					<button className="w-full tablet:w-fit border border-black/5 shadow-sm text-center rounded-lg text-black cursor-pointer py-2 px-4 font-semibold">
 						Learn More
 					</button>
 				</div>

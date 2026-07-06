@@ -84,7 +84,7 @@ export default function Tokens() {
 		<section className="w-full flex flex-col justify-start items-center">
 			<TitleAndDescription
 				title={
-					<h2 className="font-bold text-[30px] tablet:text-[56.4px] h-12 text-center w-full">
+					<h2 className="font-bold text-[30px] tablet:text-[56.4px] desktop:h-12 text-center w-full">
 						Latest Crypto <span className="text-(--green-color)">Prices</span>
 					</h2>
 				}

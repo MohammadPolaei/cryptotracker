@@ -10,7 +10,7 @@ export default function FaqSummary({
 	return (
 		<details className="faq">
 			<summary>
-				<span className="font-semibold text-[14px] tablet:text-5">
+				<span className="font-medium text-[14px] tablet:text-[19px]">
 					{question}
 				</span>
 

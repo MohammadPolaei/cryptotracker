@@ -4,14 +4,14 @@ import phoneIcon from "@/assets/contact-us/phoneIcon.svg";
 
 export default function ContactInfo() {
 	return (
-		<div className="max-w-136.5">
+		<div className="desktop:max-w-136.5">
 			<div className="flex flex-col justify-start items-start">
 				<div className="flex flex-col justify-start items-start pb-10">
 					<h2 className="font-bold text-[30px] tablet:text-[56.4px] tablet:h-18">
 						Get In
 						<span className="text-(--green-color)"> Touch</span>
 					</h2>
-					<p className="max-w-136.5 text-[16px] tablet:text-[25.5px] text-(--description-text)">
+					<p className="desktop:max-w-136.5 text-[16px] tablet:text-[25.5px] text-(--description-text)">
 						Have questions or feedback? We'd love to hear from you. Fill out the
 						form and our team will get back to you as soon as possible.
 					</p>

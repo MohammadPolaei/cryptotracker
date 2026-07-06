@@ -3,7 +3,7 @@
 @theme {
 	--breakpoint-mobile: 375px;
 	--breakpoint-tablet: 744px;
-	--breakpoint-desktop: 1280px;
+	--breakpoint-desktop: 1080px;
 }
 :root {
 	--bg-color: #f9faf9;
@@ -84,4 +84,19 @@ details[open] .arrow {
 .content p {
 	margin: 0;
 	line-height: 1.8;
+}
+
+/* no scroll bar */
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* Firefox */
+.no-scrollbar {
+	scrollbar-width: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none;
 }
