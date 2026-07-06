@@ -9,6 +9,7 @@ import solIcon from "@/assets/tokens/solIcon.svg";
 import usdtIcon from "@/assets/tokens/usdtIcon.svg";
 import xrpIcon from "@/assets/tokens/xrpIcon.svg";
 import TitleAndDescription from "@/components/shared/title-and-description";
+import { useTheme } from "@/hooks/use-theme";
 import { CurrencyType } from "@/types/currencies";
 
 const timeFrames = ["1 Day", "1 Week", "1 Month", "1 Year", "All Time"];
@@ -79,6 +80,7 @@ const currencies: CurrencyType[] = [
 
 export default function Tokens() {
 	const [isActive, setIsActive] = useState<string>(timeFrames[0]);
+	const { dark } = useTheme();
 
 	return (
 		<section
@@ -103,7 +105,11 @@ export default function Tokens() {
 						}}
 						className={`${
 							isActive == time
-								? "bg-(--time-frame-button) text-(--text-color) border-(--border-color) box-border"
+								? `bg-(--time-frame-button) text-(--text-color) ${
+										dark
+											? "border-(--border-color)/0"
+											: "border-(--border-color)"
+								  } box-border`
 								: "border-black/0 text-(--description-text)/50"
 						} px-1 tablet:px-2 py-1 rounded-sm font-semibold border-2 cursor-pointer outline-0 transition-all ease-in-out duration-800 tablet:text-[15.2px] text-[12px]`}
 					>

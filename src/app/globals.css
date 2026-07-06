@@ -20,6 +20,7 @@
 	--bg-color: #09090b;
 	--text-color: #f3f3f3;
 	--description-text: #eeeeee;
+	--border-color: #a7a7a740;
 	--time-frame-button: #000;
 	--feature-card-bg: #fff1;
 }
@@ -50,7 +51,13 @@ body {
 
 details {
 	width: 100%;
-	border: 1px solid var(--border-color);
+	border-radius: 0.45rem;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+}
+.dark details {
+	width: 100%;
+	border: 1px solid #a7a7a720;
 	border-radius: 0.45rem;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 	overflow: hidden;
@@ -88,7 +95,7 @@ details[open] summary {
 }
 
 .arrow {
-	transition: transform 0.3s ease;
+	transition: transform 0.5s ease;
 }
 
 details[open] .arrow {

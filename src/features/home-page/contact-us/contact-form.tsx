@@ -28,7 +28,7 @@ export default function ContactForm() {
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
-			className="w-full desktop:w-148.25 h-127.75 rounded-md border-2 border-(--border-color) flex flex-col justify-between items-center p-2"
+			className="w-full desktop:w-148.25 h-127.75 rounded-md border-2 border-(--border-color) flex flex-col justify-between items-center p-3"
 		>
 			<div className="flex justify-between items-center gap-5 w-full">
 				<div className="flex flex-col w-full gap-1 relative">

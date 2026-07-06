@@ -8,8 +8,8 @@ export default function FaqSummary({
 	answer: string;
 }) {
 	return (
-		<details className="faq">
-			<summary>
+		<details>
+			<summary className="shadow-[8px] shadow-black/5">
 				<span className="font-medium text-[14px] tablet:text-[19px]">
 					{question}
 				</span>
