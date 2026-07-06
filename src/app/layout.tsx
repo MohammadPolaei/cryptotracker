@@ -32,7 +32,7 @@ export default function RootLayout({
 			<body className="min-h-full flex flex-col justify-start items-center bg-(--bg-color)">
 				<Header />
 				<main className="w-full">
-					<div className="mx-auto max-w-7xl px-3 tablet:p-8 desktop:p-15">
+					<div className="mx-auto max-w-7xl px-3 tablet:p-8 tablet:py-15 desktop:p-15">
 						{children}
 					</div>
 				</main>

@@ -36,9 +36,9 @@ export default function HeroSection() {
 	return (
 		<section className="w-full flex flex-col desktop:flex-row justify-between items-center relative gap-15 desktop:gap-0">
 			{/* background (green spot) */}
-			<div className="w-2/3 h-150 absolute right-0 bg-radial via-transparent from-(--green-color)/10 to-transparent" />
+			<div className="w-full desktop:w-2/3 h-full desktop:h-150 absolute right-0 bg-radial via-transparent from-(--green-color)/10 to-transparent pointer-events-none" />
 
-			<div className="w-full max-w-181 flex flex-col gap-5">
+			<div className="w-full max-w-181 flex flex-col gap-8">
 				{" "}
 				<div className="font-bold text-[32px] tablet:text-[73px] tracking-[-2] leading-14">
 					Track Crypto <span className="text-(--green-color)">Prices</span> in

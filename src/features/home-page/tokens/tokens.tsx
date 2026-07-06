@@ -81,7 +81,10 @@ export default function Tokens() {
 	const [isActive, setIsActive] = useState<string>(timeFrames[0]);
 
 	return (
-		<section className="w-full flex flex-col justify-start items-center">
+		<section
+			className="w-full flex flex-col justify-start items-center"
+			id="tokens"
+		>
 			<TitleAndDescription
 				title={
 					<h2 className="font-bold text-[30px] tablet:text-[56.4px] desktop:h-12 text-center w-full">

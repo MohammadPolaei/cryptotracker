@@ -50,7 +50,7 @@ const featuresList: FeatureType[] = [
 
 export default function Features() {
 	return (
-		<section>
+		<section id="features">
 			<TitleAndDescription
 				title={
 					<h2 className="font-bold text-[30px] tablet:text-[56.4px] desktop:h-12 text-center w-full">
