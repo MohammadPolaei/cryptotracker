@@ -38,9 +38,9 @@ export default function HeroSection() {
 			{/* background (green spot) */}
 			<div className="w-full desktop:w-2/3 h-full desktop:h-150 absolute right-0 bg-radial via-transparent from-(--green-color)/10 to-transparent pointer-events-none" />
 
-			<div className="w-full max-w-181 flex flex-col gap-8">
+			<div className="w-full max-w-181 flex flex-col gap-4 tablet:gap-8">
 				{" "}
-				<div className="font-bold text-[32px] tablet:text-[73px] tracking-[-2] leading-14">
+				<div className="font-bold text-[32px] tablet:text-[73px] tracking-[-1] tablet:tracking-[-3] leading-10 tablet:leading-18 desktop:leading-15">
 					Track Crypto <span className="text-(--green-color)">Prices</span> in
 					Real-Time
 				</div>
@@ -50,10 +50,10 @@ export default function HeroSection() {
 					tracking platform.
 				</p>
 				<div className="w-full tablet:w-62.5 flex flex-col tablet:flex-row justify-between items-center gap-5 tablet:gap-0">
-					<button className="w-full tablet:w-fit bg-(--green-color) text-center rounded-lg text-white cursor-pointer py-2 px-4 font-semibold">
+					<button className="w-full tablet:w-fit bg-(--green-color) text-center rounded-md text-white cursor-pointer py-2 px-4 font-semibold">
 						Get Started
 					</button>
-					<button className="w-full tablet:w-fit border border-black/5 shadow-sm text-center rounded-lg text-black cursor-pointer py-2 px-4 font-semibold">
+					<button className="w-full tablet:w-fit border border-black/5 shadow-sm text-center rounded-md text-black cursor-pointer py-2 px-4 font-semibold">
 						Learn More
 					</button>
 				</div>

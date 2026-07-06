@@ -111,7 +111,9 @@ export default function Tokens() {
 					</button>
 				))}
 			</div>
-			<div className="w-full">
+			<div className="w-full relative">
+				<div className="h-200 absolute w-full bg-radial via-transparent from-(--green-color)/5 to-transparent" />
+
 				<ListContainer currencies={currencies} />
 			</div>
 		</section>

@@ -57,7 +57,7 @@ export default function Header() {
         top-full
         right-0
         w-full
-        bg-(--bg-color)/10
+        bg-(--bg-color)/50
 				backdrop-blur-[20px]
         overflow-hidden
 				z-100
@@ -77,7 +77,7 @@ export default function Header() {
 						href={navItem.href}
 						key={navItem.title}
 						onClick={() => toggleMenu()}
-						className="text-black bg-white rounded-lg border border-black/10 py-5 w-4/5 text-center origin-center active:scale-120 transition duration-100 ease-in-out"
+						className="text-black bg-radial from-transparent to-white/50 rounded-lg shadow-sm shadow-b-black/10 py-5 w-4/5 text-center origin-center active:scale-120 transition duration-100 ease-in-out"
 					>
 						{navItem.title}
 					</Link>
