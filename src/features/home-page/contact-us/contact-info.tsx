@@ -11,7 +11,7 @@ export default function ContactInfo() {
 						Get In
 						<span className="text-(--green-color)"> Touch</span>
 					</h2>
-					<p className="text-[25.5px] text-(--description-text)">
+					<p className="max-w-136.5 text-[25.5px] text-(--description-text)">
 						Have questions or feedback? We'd love to hear from you. Fill out the
 						form and our team will get back to you as soon as possible.
 					</p>

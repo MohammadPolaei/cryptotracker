@@ -16,7 +16,7 @@ export default function Header() {
 				<img src={cryptoTrackerIcon.src} alt="Icon" />
 				<span className="font-semibold text-2xl">CryptoTracker</span>
 			</div>
-			<nav className="flex justify-between items-center w-[273.68px] h-5 text-[15.2px]">
+			<nav className="hidden tablet:flex justify-between items-center max-w-[273.68px] h-5 text-[15.2px]">
 				{navBarList.map((navItem) => (
 					<Link href={navItem.href} key={navItem.title}>
 						{navItem.title}

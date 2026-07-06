@@ -3,8 +3,8 @@
 @theme {
 	--breakpoint-mobile: 375px;
 	--breakpoint-tablet: 744px;
+	--breakpoint-desktop: 1280px;
 }
-
 :root {
 	--bg-color: #f9faf9;
 	--text-color: #09090b;
