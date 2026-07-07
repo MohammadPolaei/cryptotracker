@@ -40,17 +40,18 @@ html {
 body {
 	background: var(--bg-color);
 	color: var(--text-color);
-	transition: background-color 1s ease, color 1s ease;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #theHeader {
-	transition: background-color 1s ease, color 1s ease;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* FAQ */
 
 details {
 	width: 100%;
+	border: 1px solid #a7a7a700;
 	border-radius: 0.45rem;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 	overflow: hidden;
