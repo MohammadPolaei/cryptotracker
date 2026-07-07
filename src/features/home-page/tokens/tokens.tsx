@@ -97,7 +97,12 @@ export default function Tokens() {
 
 					return {
 						...coin,
-						price: newPrice,
+						price:
+							newPrice > 10
+								? Number(newPrice.toFixed(1))
+								: newPrice > 100
+								? Number(newPrice.toFixed(0))
+								: Number(newPrice.toFixed(2)),
 						change: Number(change.toFixed(2)),
 						changeStat: change >= 0 ? "acs" : "dec",
 						marketCap: Math.round(randomChange(coin.marketCap, 0.1)),
