@@ -21,7 +21,7 @@ export default function CurrencySingleRow({
 					</span>
 				</div>
 			</td>
-			<td className="font-semibold text-left">{`$${singleCurrency.price}`}</td>
+			<td className="font-semibold text-left">{`$${singleCurrency.price.toLocaleString()}`}</td>
 			<td
 				className={`${
 					singleCurrency.changeStat == "acs"
@@ -35,11 +35,11 @@ export default function CurrencySingleRow({
 							singleCurrency.changeStat == "acs" ? acsIcon.src : decIcon.src
 						}`}
 					/>{" "}
-					{`${singleCurrency.change}%`}
+					{`${singleCurrency.change.toFixed(2).toLocaleString()}%`}
 				</div>
 			</td>
-			<td className="font-semibold text-right px-5">{`$${singleCurrency.marketCap}`}</td>
-			<td className="font-semibold text-right px-5">{`$${singleCurrency.volume}`}</td>
+			<td className="font-semibold text-right px-5">{`$${singleCurrency.marketCap.toLocaleString()}`}</td>
+			<td className="font-semibold text-right px-5">{`$${singleCurrency.volume.toLocaleString()}`}</td>
 		</tr>
 	);
 }
