@@ -35,7 +35,10 @@ export default function CurrencySingleRow({
 							singleCurrency.changeStat == "acs" ? acsIcon.src : decIcon.src
 						}`}
 					/>{" "}
-					{`${singleCurrency.change.toFixed(2).toLocaleString()}%`}
+					{`${singleCurrency.change
+						.toFixed(2)
+						.toLocaleString()
+						.replace("-", "")}%`}
 				</div>
 			</td>
 			<td className="font-semibold text-right px-5">{`$${singleCurrency.marketCap.toLocaleString()}`}</td>

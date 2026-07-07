@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ListContainer from "./list-container";
 // icons
 import bnbIcon from "@/assets/tokens/bnbIcon.svg";
@@ -11,6 +11,7 @@ import xrpIcon from "@/assets/tokens/xrpIcon.svg";
 import TitleAndDescription from "@/components/shared/title-and-description";
 import { useTheme } from "@/hooks/use-theme";
 import { CurrencyType } from "@/types/currencies";
+import { randomChange } from "@/utils/random-change";
 
 const timeFrames = ["1 Day", "1 Week", "1 Month", "1 Year", "All Time"];
 
@@ -80,7 +81,34 @@ const currencies: CurrencyType[] = [
 
 export default function Tokens() {
 	const [isActive, setIsActive] = useState<string>(timeFrames[0]);
+	const [coins, setCoins] = useState<CurrencyType[]>(currencies);
+
 	const { dark } = useTheme();
+
+	// price change (mock api)
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCoins((prev) =>
+				prev.map((coin) => {
+					const oldPrice = coin.price;
+					const newPrice = randomChange(coin.price);
+					const change = ((newPrice - oldPrice) / oldPrice) * 100;
+
+					return {
+						...coin,
+						price: newPrice,
+						change: Number(change.toFixed(2)),
+						changeStat: change >= 0 ? "acs" : "dec",
+						marketCap: Math.round(randomChange(coin.marketCap, 0.1)),
+						volume: Math.round(randomChange(coin.volume, 1)),
+					};
+				})
+			);
+		}, 1800);
+
+		return () => clearInterval(interval);
+	}, []);
 
 	return (
 		<section
@@ -120,7 +148,7 @@ export default function Tokens() {
 			<div className="w-full relative">
 				<div className="h-200 absolute w-full bg-radial via-transparent from-(--green-color)/5 to-transparent" />
 
-				<ListContainer currencies={currencies} />
+				<ListContainer currencies={coins} />
 			</div>
 		</section>
 	);
