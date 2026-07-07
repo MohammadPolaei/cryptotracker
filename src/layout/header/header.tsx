@@ -89,16 +89,20 @@ export default function Header() {
         bg-(--bg-color)/50
 				backdrop-blur-[20px]
         overflow-hidden
-				z-100
+				
 
         transition-all
         duration-800
         ease-in-out
 
-        ${isMenuOpen ? "h-screen opacity-100" : "max-h-0 opacity-0"}
+        ${
+					isMenuOpen
+						? "h-screen opacity-100 z-100 py-10"
+						: "max-h-0 opacity-0 z-0 py-0"
+				}
 
 				flex flex-col justify-start items-center gap-5
-				py-10
+				
     `}
 			>
 				{navBarList.map((navItem) => (
